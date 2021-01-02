@@ -1,1 +1,95 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+header {
+  background-color: white;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-navigation {
+  display: none;
+}
+
+header .header-navigation ul {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .header-navigation li {
+  margin: 1rem 0;
+}
+
+header .header-navigation li a {
+  text-decoration: none;
+  color: #2d314d;
+}
+
+header .btn {
+  display: none;
+}
+
+header .toggle-nav {
+  width: 30px;
+  height: 15px;
+  background: url(../../../images/icon-hamburger.svg) no-repeat center/cover;
+  border: none;
+}
+
+header.active .header-navigation {
+  display: initial;
+  width: 85%;
+  position: fixed;
+  top: 80px;
+  z-index: 5;
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */
