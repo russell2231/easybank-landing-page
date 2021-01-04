@@ -1,0 +1,86 @@
+header {
+	background-color: $white;
+	padding: 1rem 0;
+	position: relative;
+	z-index: 5;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-navigation {
+		display: none;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			display: flex;
+
+			a {
+				text-decoration: none;
+				color: $text-dark;
+				padding-bottom: 1.5rem;
+
+				@include desktop {
+					&:hover {
+						color: $primary-color;
+						border-bottom: 5px solid $secondary-color;
+					}
+				}
+			}
+
+			@include desktop {
+				justify-content: space-between;
+			}
+		}
+
+		&.active {
+			background-color: $white;
+			padding: 1rem 0;
+			display: initial;
+			position: fixed;
+			top: 80px;
+			width: 85%;
+			border-radius: 5px;
+
+			ul {
+				flex-direction: column;
+				align-items: center;
+
+				li {
+					margin: 0.6rem 0;
+
+					a {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+
+		@include desktop {
+			display: initial;
+			width: 35%;
+		}
+	}
+
+	.request {
+		display: none;
+
+		@include desktop {
+			display: initial;
+		}
+	}
+
+	.toggle-nav {
+		width: 30px;
+		height: 30px;
+		background: url(../../images/icon-hamburger.svg) no-repeat center/contain;
+		border: none;
+
+		@include desktop {
+			display: none;
+		}
+	}
+}

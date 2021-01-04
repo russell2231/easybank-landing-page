@@ -1,0 +1,64 @@
+.intro {
+	background-color: $light-gray;
+	padding-bottom: 4rem;
+
+	.container {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@include desktop {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.intro-img-container {
+		background: url(../../images/bg-intro-mobile.svg) no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin: 0 -28.33%;
+		text-align: center;
+		overflow: hidden;
+
+		img {
+			width: 70%;
+			margin-top: -25%;
+		}
+
+		@include desktop {
+			background: url(../../images/bg-intro-desktop.svg) no-repeat;
+			background-position: 0% 60%;
+			width: 85%;
+			max-width: 1000px;
+			height: 600px;
+			position: relative;
+			overflow: visible;
+
+			img {
+				max-width: 730px;
+				margin-top: 0;
+				position: absolute;
+				right: 120px;
+				top: -120px;
+			}
+		}
+	}
+
+	.intro-text {
+		text-align: center;
+
+		.request {
+			margin-top: 1rem;
+		}
+
+		@include desktop {
+			text-align: left;
+			width: 40%;
+		}
+	}
+
+	@include desktop {
+		padding-bottom: 0;
+	}
+}

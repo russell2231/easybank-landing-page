@@ -1,0 +1,33 @@
+.about {
+	background-color: $grayish-blue;
+	padding: 3rem 0;
+	text-align: center;
+
+	.about-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem 0;
+
+		.reason {
+			margin-top: 1rem;
+
+			@include desktop {
+				padding: 0.5rem;
+			}
+		}
+
+		@include desktop {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	@include desktop {
+		text-align: left;
+
+		.about-heading {
+			width: 65%;
+		}
+	}
+}
