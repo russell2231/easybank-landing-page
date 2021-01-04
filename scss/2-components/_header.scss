@@ -36,29 +36,6 @@ header {
 			}
 		}
 
-		&.active {
-			background-color: $white;
-			padding: 1rem 0;
-			display: initial;
-			position: fixed;
-			top: 80px;
-			width: 85%;
-			border-radius: 5px;
-
-			ul {
-				flex-direction: column;
-				align-items: center;
-
-				li {
-					margin: 0.6rem 0;
-
-					a {
-						color: $primary-color;
-					}
-				}
-			}
-		}
-
 		@include desktop {
 			display: initial;
 			width: 35%;
@@ -81,6 +58,35 @@ header {
 
 		@include desktop {
 			display: none;
+		}
+	}
+
+	&.active {
+		.header-navigation {
+			background-color: $white;
+			padding: 1rem 0;
+			display: initial;
+			position: fixed;
+			top: 80px;
+			width: 85%;
+			border-radius: 5px;
+
+			ul {
+				flex-direction: column;
+				align-items: center;
+
+				li {
+					margin: 0.6rem 0;
+
+					a {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+
+		.toggle-nav {
+			background: url(../../images/icon-close.svg) no-repeat center/contain;
 		}
 	}
 }
